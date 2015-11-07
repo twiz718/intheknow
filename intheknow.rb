@@ -1,9 +1,10 @@
 require 'open-uri'
 require './ansi_colors.rb'
 
+include AnsiColors
+
 class Article
   attr :title, :link
-  include AnsiColors
 
   def initialize(title, link)
     @title, @link = title, link
@@ -52,7 +53,6 @@ class CNN
   end
 end
 
-include AnsiColors
 cnn = CNN.new
 cnn.get_articles_html('cnn.html')
 #puts cnn.articles.collect(&:to_html)
