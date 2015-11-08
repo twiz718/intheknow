@@ -1,4 +1,4 @@
-require './ansi_colors.rb'
+require './lib/ansi_colors.rb'
 
 include AnsiColors
 
